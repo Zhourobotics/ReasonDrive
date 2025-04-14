@@ -106,7 +106,7 @@ print(response)
 
 ## Unsloth Fine-Tuning
 
-We use Unsloth for efficient fine-tuning of our models. Example command:
+We use [Unsloth](https://github.com/unslothai/unsloth) for efficient fine-tuning of our models. Example command:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python scripts/vlm-finetuning.py \
@@ -126,14 +126,7 @@ Our experiments demonstrate that reasoning-based fine-tuning consistently outper
 
 ![Model Comparison](assets/model_comparison.png)
 
-### Performance Comparison
 
-| Model | Accuracy | ChatGPT | Match | Bleu_4 | ROUGE_L | Final Score |
-|-------|----------|---------|-------|--------|---------|-------------|
-| Llama3.2-11B-reason | 0.68 | 0.62 | 0.36 | 0.54 | 0.70 | 0.55 |
-| Qwen2.5-7B-reason | 0.67 | 0.62 | 0.36 | 0.52 | 0.69 | 0.54 |
-| Llava1.5-7B-reason | 0.66 | 0.56 | 0.33 | 0.52 | 0.68 | 0.51 |
-| Qwen2.5-3B-reason | 0.47 | 0.56 | 0.37 | 0.26 | 0.55 | 0.45 |
 
 ## Documentation
 
