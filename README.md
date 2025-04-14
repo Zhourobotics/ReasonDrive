@@ -47,6 +47,8 @@ Our reasoning-enhanced dataset is available on Hugging Face:
 
 This dataset enhances the original DriveLM benchmark with structured reasoning chains for driving scenarios, generated using GPT-4o.
 
+Please refer to [DriveLM dataset](https://github.com/OpenDriveLab/DriveLM/tree/main/challenge#how-to-prepare-data) to prepare the dataset.
+
 ## Installation
 
 ```bash
@@ -107,7 +109,7 @@ print(response)
 We use Unsloth for efficient fine-tuning of our models. Example command:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python scripts/qwen-vl-finetuning.py \
+CUDA_VISIBLE_DEVICES=0 python scripts/vlm-finetuning.py \
     --model_id "unsloth/Qwen2.5-VL-3B-Instruct-unsloth-bnb-4bit" \
     --output_dir "outputs_Qwen2.5-VL-3B-Instruct" \
     --epoch 5 \
