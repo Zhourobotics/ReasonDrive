@@ -1,0 +1,11 @@
+# Dependencies
+torch>=2.0.0
+transformers>=4.36.0
+accelerate>=0.25.0
+datasets>=2.14.0
+pillow>=10.0.0
+matplotlib>=3.7.0
+tqdm>=4.66.0
+wandb>=0.15.0
+unsloth>=0.3.5
+
