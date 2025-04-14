@@ -119,6 +119,39 @@ CUDA_VISIBLE_DEVICES=0 python scripts/vlm-finetuning.py \
     --wandb_run_name "qwen2.5-3B-reason"
 ```
 
+## Model Evaluation
+
+We follow a two-stage evaluation process:
+
+### Stage 1: Model Response Generation
+
+First, we generate model responses using the Unsloth framework:
+
+```bash
+python scripts/eval_finetuned_models.py \
+    --model_path "outputs_Qwen2.5-VL-3B-Instruct/checkpoint-250" \
+    --data_path "drivelm_with_thinking_800_frames_clean.json" \
+    --base_image_path "/path/to/nuscenes" \
+    --output_path "results/qwen2.5-3b-reason_responses.json" \
+    --test_size 0.1 \
+    --seed 3047
+```
+
+This script:
+- Loads fine-tuned models using Unsloth
+- Processes images and questions from the test split
+- Generates responses with reasoning and answers
+- Saves responses in JSON format for subsequent metric calculation
+
+### Stage 2: Comprehensive Metrics Calculation
+
+We then use the DriveLM evaluation framework to calculate multiple metrics:
+
+```bash
+python scripts/evaluation.py \
+    --root_path1 "results/qwen2.5-3b-reason_responses.json" \
+    --root_path2 "drivelm_with_thinking_800_frames_clean.json"
+```
 
 ## Results
 
