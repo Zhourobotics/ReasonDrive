@@ -28,13 +28,13 @@ Our trained models are available on Hugging Face:
 
 | Model | Description | Link |
 |-------|-------------|------|
-| Llama-3.2-11B-Vision-DriveLM | Llama 3.2 11B with standard fine-tuning | [ac4462/llama-3.2-11b-vision-DriveLM](https://huggingface.co/ac4462/llama-3.2-11b-vision-DriveLM) |
+| Llama-3.2-11B-Vision-DriveLM-smpl | Llama 3.2 11B with standard fine-tuning | [ac4462/llama-3.2-11b-vision-DriveLM](https://huggingface.co/ac4462/llama-3.2-11b-vision-DriveLM) |
 | Llama-3.2-11B-Vision-DriveLM-reason | Llama 3.2 11B with reasoning-enhanced fine-tuning | [ac4462/Llama-3.2-11B-Vision-DriveLM-Cot](https://huggingface.co/ac4462/Llama-3.2-11B-Vision-DriveLM-Cot) |
-| Llava-1.5-7B-DriveLM | Llava 1.5 7B with standard fine-tuning | [ac4462/llava-1.5-7b-DriveLM](https://huggingface.co/ac4462/llava-1.5-7b-DriveLM) |
+| Llava-1.5-7B-DriveLM-smpl | Llava 1.5 7B with standard fine-tuning | [ac4462/llava-1.5-7b-DriveLM](https://huggingface.co/ac4462/llava-1.5-7b-DriveLM) |
 | Llava-1.5-7B-DriveLM-reason | Llava 1.5 7B with reasoning-enhanced fine-tuning | [ac4462/llava-1.5-7b-DriveLM-Cot](https://huggingface.co/ac4462/llava-1.5-7b-DriveLM-Cot) |
-| Qwen2.5-VL-7B-DriveLM | Qwen 2.5 VL 7B with standard fine-tuning | [ac4462/Qwen2.5-VL-7B-DriveLM](https://huggingface.co/ac4462/Qwen2.5-VL-7B-DriveLM) |
+| Qwen2.5-VL-7B-DriveLM-smpl | Qwen 2.5 VL 7B with standard fine-tuning | [ac4462/Qwen2.5-VL-7B-DriveLM](https://huggingface.co/ac4462/Qwen2.5-VL-7B-DriveLM) |
 | Qwen2.5-VL-7B-DriveLM-reason | Qwen 2.5 VL 7B with reasoning-enhanced fine-tuning | [ac4462/Qwen2.5-VL-7B-DriveLM-Cot](https://huggingface.co/ac4462/Qwen2.5-VL-7B-DriveLM-Cot) |
-| Qwen2.5-VL-3B-DriveLM | Qwen 2.5 VL 3B with standard fine-tuning | [ac4462/Qwen2.5-VL-3B-DriveLM](https://huggingface.co/ac4462/Qwen2.5-VL-3B-DriveLM) |
+| Qwen2.5-VL-3B-DriveLM-smpl | Qwen 2.5 VL 3B with standard fine-tuning | [ac4462/Qwen2.5-VL-3B-DriveLM](https://huggingface.co/ac4462/Qwen2.5-VL-3B-DriveLM) |
 | Qwen2.5-VL-3B-DriveLM-reason | Qwen 2.5 VL 3B with reasoning-enhanced fine-tuning | [ac4462/Qwen2.5-VL-3B-DriveLM-Cot](https://huggingface.co/ac4462/Qwen2.5-VL-3B-DriveLM-Cot) |
 
 **Note:** While the model filenames on Hugging Face use "Cot" (Chain of Thought), we refer to these as "reason" models in our paper and documentation.
@@ -53,13 +53,6 @@ This dataset enhances the original DriveLM benchmark with structured reasoning c
 # Clone the repository
 git clone https://github.com/yourusername/ReasonDrive.git
 cd ReasonDrive
-
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
 ## Docker Setup
@@ -124,7 +117,6 @@ CUDA_VISIBLE_DEVICES=0 python scripts/qwen-vl-finetuning.py \
     --wandb_run_name "qwen2.5-3B-reason"
 ```
 
-For more details, see [docs/unsloth_training.md](docs/unsloth_training.md).
 
 ## Results
 
